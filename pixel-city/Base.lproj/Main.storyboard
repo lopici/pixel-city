@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,8 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEt-Ge-0YO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEt-Ge-0YO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="450-kz-kmF">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
@@ -47,8 +48,8 @@
                                     <constraint firstAttribute="height" constant="70" id="qvi-SE-506"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ5-ij-NwX">
-                                <rect key="frame" x="309" y="597" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ5-ij-NwX">
+                                <rect key="frame" x="309" y="596" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ENv-l4-tVF"/>
                                     <constraint firstAttribute="width" constant="50" id="eL4-nV-NXa"/>
@@ -58,11 +59,11 @@
                                     <action selector="centerMapBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJC-Ox-dte"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgu-cU-ipI">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgu-cU-ipI">
+                                <rect key="frame" x="0.0" y="666" width="375" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" id="YY0-Kk-Ra7"/>
+                                    <constraint firstAttribute="height" constant="1" id="L6h-26-Spu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -73,15 +74,16 @@
                             <constraint firstItem="xgu-cU-ipI" firstAttribute="top" secondItem="PEt-Ge-0YO" secondAttribute="bottom" id="Ddd-bi-2tG"/>
                             <constraint firstItem="450-kz-kmF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KIi-LG-7T7"/>
                             <constraint firstItem="PEt-Ge-0YO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mtg-lM-TJL"/>
+                            <constraint firstItem="xgu-cU-ipI" firstAttribute="top" secondItem="ZQ5-ij-NwX" secondAttribute="bottom" constant="20" id="OJp-TY-TrT"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZQ5-ij-NwX" secondAttribute="bottom" constant="20" id="ROc-0u-cLn"/>
                             <constraint firstAttribute="trailing" secondItem="450-kz-kmF" secondAttribute="trailing" id="Vrq-d8-2M5"/>
                             <constraint firstAttribute="bottom" secondItem="xgu-cU-ipI" secondAttribute="bottom" id="VyL-av-OnG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZQ5-ij-NwX" secondAttribute="trailing" id="dJT-Te-7zQ"/>
-                            <constraint firstItem="xgu-cU-ipI" firstAttribute="top" secondItem="ZQ5-ij-NwX" secondAttribute="bottom" constant="20" id="kQa-Sp-OhE"/>
                             <constraint firstItem="xgu-cU-ipI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n0V-G0-msh"/>
                             <constraint firstItem="PEt-Ge-0YO" firstAttribute="top" secondItem="450-kz-kmF" secondAttribute="top" id="tsx-M1-K14"/>
                             <constraint firstAttribute="trailing" secondItem="xgu-cU-ipI" secondAttribute="trailing" id="uSM-Kp-7vw"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="EaC-jj-XAw"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="ROc-0u-cLn"/>
@@ -90,6 +92,8 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="PEt-Ge-0YO" id="VD1-u1-G2e"/>
+                        <outlet property="pullUpView" destination="xgu-cU-ipI" id="PI8-UX-YMu"/>
+                        <outlet property="pullUpViewHeightConstraint" destination="L6h-26-Spu" id="Ysb-hJ-whF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
