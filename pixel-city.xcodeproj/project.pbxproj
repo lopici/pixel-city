@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01433F6F1FBE4E1000A15673 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01433F6E1FBE4E1000A15673 /* PhotoCell.swift */; };
 		01433F711FBE52F600A15673 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01433F701FBE52F600A15673 /* Constants.swift */; };
+		01433F751FBE726000A15673 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01433F741FBE726000A15673 /* PopVC.swift */; };
 		019BD08F1FBDA616002C88F9 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BD08E1FBDA616002C88F9 /* DroppablePin.swift */; };
 		01B7DA081FB9A31D00A7199B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7DA071FB9A31D00A7199B /* AppDelegate.swift */; };
 		01B7DA0A1FB9A31D00A7199B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7DA091FB9A31D00A7199B /* MapVC.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		01433F6E1FBE4E1000A15673 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		01433F701FBE52F600A15673 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		01433F741FBE726000A15673 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		019BD08E1FBDA616002C88F9 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 		01B7DA041FB9A31D00A7199B /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B7DA071FB9A31D00A7199B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				01B7DA091FB9A31D00A7199B /* MapVC.swift */,
+				01433F741FBE726000A15673 /* PopVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01433F751FBE726000A15673 /* PopVC.swift in Sources */,
 				01433F711FBE52F600A15673 /* Constants.swift in Sources */,
 				01433F6F1FBE4E1000A15673 /* PhotoCell.swift in Sources */,
 				01B7DA0A1FB9A31D00A7199B /* MapVC.swift in Sources */,
